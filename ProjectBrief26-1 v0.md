@@ -474,9 +474,9 @@ ESG 리포팅 자동화, 맞춤형 행동 가이드, 경량화 플랫폼 |
 | (3) 구성원 | 강선화(2376004): 리더,*역할,...* <br> 박세진(2217011): 팀원,*역할,....* <br> 박윤형(2271029): 팀원,*역할,....* |
 | (4) 지도교수 | 윤명국 교수 |
 | (5) 트랙  | 연구 |
-| (6) 과제 키워드 | Edge-Optimized Multimodal model, Inference Acceleration, Edge Device, Embedded AI, Profiling |
-| (7) 과제 내용 요약 |   |
-| (8) 주요 Link |  |
+| (6) 과제 키워드 | NVIDIA Jetson, Multimodal, CUTLASS, Kernel Fusion, Embedded GPU Optimization |
+| (7) 과제 내용 요약 | **[만들고자 하는 것]** Jetson Nano와 같은 임베디드 GPU 환경에서 실행되는 멀티모달 모델의 추론 과정 중 발생하는 GPU kernel-level 병목을 분석하고 이를 Kernel Fusion 및 실행 구조 최적화를 통해 GPU utilization을 향상시키는 시스템을 구축한다.<br/><br/> **[고객]** 멀티모달 모델의 inference 성능 최적화에 관심 있는 연구자 및 GPU 기반 AI 시스템 개발자<br/><br/> **[Pain Point]** 멀티모달 모델의 크기와 연산량이 빠르게 증가하면서, Jetson과 같은 엣지 디바이스에서 실시간 추론을 수행하는 것이 점점 어려워지고 있다. 특히 엣지 환경은 서버급 GPU에 비해 연산 자원과 메모리 대역폭이 제한적이기 때문에, kernel launch overhead, 불필요한 DRAM access, 낮은 GPU utilization과 같은 비효율이 더욱 크게 성능 병목으로 이어진다. 이러한 문제는 end-to-end latency를 증가시켜 실시간 서비스 구현을 어렵게 만든다. <br/>TensorRT와 같은 기존 최적화 프레임워크는 효과적인 범용 커널 퓨전을 제공하지만, general-purpose 방식이기 때문에 멀티모달 모델 구조에서 발생하는 추가적인 fusion opportunity를 충분히 활용하지 못하는 한계가 있다. <br/>따라서 엣지 디바이스에 적합한 멀티모달 모델 최적화를 위해, profiling 기반으로 fusion 가능한 커널을 체계적으로 분석하고 최적의 커널 퓨전 조합을 찾는 연구가 필요하다.   |
+| (8) 주요 Link | https://github.com/Nitro-Ewha/Multimodal_on_Jetson |
  
 <br>
  
